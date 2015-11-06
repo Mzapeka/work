@@ -8,6 +8,7 @@
                         <th>№</th>
                         <th>ID</th>
                         <th>Компания</th>
+                        <th>Адрес</th>
                         <th>Контактное лицо</th>
                         <th>E-mail</th>
                         <th>Телефон</th>
@@ -25,11 +26,12 @@
                                 <td><?=$j?></td>
                                 <td><?=$dialler['idDiller']?></td>
                                 <td><?=$dialler['compName']?></td>
+                                <td><?=$dialler['adress']?></td>
                                 <td><?=$dialler['firstName']?> <?=$dialler['lastName']?></td>
                                 <td><?=$dialler['mail']?></td>
                                 <td><?=$dialler['phone']?></td>
                                 <td><?=$dialler['createData']?></td>
-                                <td><?=$dialler['status']?></td>
+                                <td><?=$dialler['status']==1 ? "Активный" : ""?></td>
                                 <td>
                                     <a href="#">
                                 <span>
