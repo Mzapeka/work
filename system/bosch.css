@@ -1,0 +1,295 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-bottom: 40px;
+    color: #5a5a5a;
+
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+.Logo {
+    color: #808285;
+    text-decoration: none;
+    padding: 0px 20px;
+    display: block;
+    width: auto;
+    position: relative;
+    text-align: right;
+    background-color: rgba(244,244,244, 0.7);
+
+}
+
+.navbar-wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+    padding-right: 0;
+    padding-left: 0;
+}
+.navbar-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+    background: #628CB2;
+    background: -moz-linear-gradient (top, #628CB2, #023C6B);
+    background: -webkit-linear-gradient(top, #628CB2, #023C6B);
+    background: -o-linear-gradient (top, #628CB2, #023C6B);
+    background: -ms-linear-gradient (top, #628CB2, #023C6B);
+    background: linear-gradient (top, #628CB2, #023C6B);
+    margin-bottom:0;
+
+}
+
+/*#navbar {
+    position: relative;
+    width: auto;
+}*/
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #f0f0f0
+}
+
+.navbar-inverse .navbar-nav > li > button {
+    color: #f0f0f0;
+    margin-top: 10%;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+    color: #111111;
+    background-color: transparent
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #00375f;
+    background-color: #080808
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    color: #fff;
+    background: #e2e1e2;
+    background: -moz-linear-gradient(top, #f6f6f6, #FFF);
+    background: -webkit-linear-gradient(top, #646464, #ffffff);
+    background: -o-linear-gradient(top, #e2e1e2, #fff);
+    background: -ms-linear-gradient(top, #e2e1e2, #fff);
+    background: linear-gradient(top, #e2e1e2, #fff);
+}
+
+.navbar-inverse .navbar-brand{
+    color: #f0f0f0;
+}
+
+.navbar-wrapper .navbar .container {
+    width: auto;
+}
+
+#second {
+    position: relative;
+    float: right;
+
+}
+
+.maincontainer {
+    position: relative;
+    min-height: 300px;
+}
+
+.jumbotron {
+   /* background-image:url('/sourses/jumbo.jpg');*/
+
+    /*opacity: 0.5;*/
+    /*height: 350px;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: #3f6b8e;
+    background: -webkit-linear-gradient(top, #628CB2 0%,  #023C6B 50%, #628CB2 100%);
+    background: -moz-linear-gradient(top, #628CB2 0%,  #023C6B 50%, #628CB2 100%);
+    background: -o-linear-gradient(top, #628CB2 0%,  #023C6B 50%, #628CB2 100%);
+    background: -ms-linear-gradient(top, #628CB2 0%,  #023C6B 50%, #628CB2 100%);
+    background: linear-gradient(top, #628CB2 0%,  #023C6B 50%, #628CB2 100%);
+    margin-bottom: 60px;
+}
+
+.jumbotron .container p {
+    color: #fff;
+
+}
+.jumbotron .container h1 {
+    color: #fff;
+    margin-top: 70px;
+
+}
+
+#box1 {
+    position: relative;
+    float: left;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.marketing h2 {
+    font-weight: normal;
+}
+.marketing .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.marketing .bigbut a{
+    font-size: 40px;
+    margin-top: 10px;
+}
+.marketing .bigbut button{
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+mark {
+    color: #000;
+    /*background: #f1f1f1;*/
+    font-weight: bold;
+}
+
+#regForm{
+position: relative;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+/* FOOTER
+-------------------------------------------------- */
+
+#mainFooter {
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (max-width: 992px) {
+    #second {
+        position: relative;
+        float: right;
+    }
+    .featurette-heading {
+        margin-top: 60px;
+        font-size: 50px;
+    }
+    .marketing .bigbut a{
+        font-size: 45px;
+        margin-top: 10px;
+    }
+    .marketing .bigbut button{
+        font-size: 45px;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 768px) {
+    /* Navbar positioning foo */
+   /* .navbar-wrapper {
+        margin-top: 20px;
+    }*/
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+
+    #second {
+        position: relative;
+        float: left;
+    }
+
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 40px;
+    }
+    .marketing .bigbut a{
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    .marketing .bigbut button{
+        font-size: 40px;
+        margin-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    #second {
+        position: relative;
+        float: left;
+    }
+    .featurette-heading {
+        margin-top: 30px;
+        font-size: 40px;
+    }
+
+    .marketing .bigbut a{
+        height: 100px;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .marketing .bigbut button{
+        height: 100px;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+}

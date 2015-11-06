@@ -1,0 +1,254 @@
+
+#boschLogo {
+	position: relative;
+	text-align: right;
+	
+}
+
+#footer a{
+	color: #fff;
+}
+
+#boschLogo a {
+color: #808285;
+text-decoration: none;
+padding: 2px 5px;
+display: block;
+width: auto;
+}
+
+html {
+        background:#87888a none;
+		margin: 0;
+	}
+#back {
+background:#87888a none;
+position: relative;
+/* margin:0;
+border:0; */
+
+/*  min-height: 100%;
+        min-width: 1024px; */
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+        /* Set up positioning */
+/*         position: fixed;
+        top: 0;
+        left: 0;
+ */
+		}
+
+#mainLay {
+	background:#fff none;
+}
+
+ #point1, #point2, #point3{
+
+	border: none;
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+
+/*.pointmain p{
+display: block;
+	position: relative;
+
+	padding: 0;
+	margin-right: auto;
+	margin-left: auto;
+}*/
+
+/* #mainContainer {
+	position: relative;
+	width: 1002px;
+	background: #fff;
+	padding: 0;
+	vertical-align: top;
+	margin: 0 auto;
+	clear: both;
+	z-index: 3;
+}
+
+#backgr {
+	position: absolute;
+	text-align: left;
+	background: #87888a none;
+	border: none;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#back {
+	position: relative;
+	border: none;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1002px;
+} */
+
+.nav {
+  /* background: #06406f; */
+  font: normal 14px/18px Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  
+    background: #023C6B;
+    background: -moz-linear-gradient (top, #628CB2 bottom, #023C6B);
+    background: -webkit-linear-gradient(top, #628CB2, #023C6B);;
+    background: -o-linear-gradient (top, #628CB2 bottom, #023C6B));
+    background: -ms-linear-gradient (top, #628CB2 bottom, #023C6B);
+    background: linear-gradient (top, #628CB2 bottom, #023C6B);
+ }
+
+.nav button {
+	background: transparent;
+	color:  #fff;
+
+}
+ 
+.zagol .nav a {
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+  margin: 50px 10px 5px 10px;
+}
+
+.zagol .nav li {
+  display: inline;
+  color: #FFFFF;
+}
+
+.jumbotron {
+	background-image:url('/sourses/jumbo.jpg');
+
+    /*opacity: 0.5;*/
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+}
+
+/* .jumbotron .container {
+  position: relative;
+  
+} */
+
+@media only screen and (max-width: 992px){
+    .jumbotron h1{
+		font-size:220% !important;
+		/* line-height:115% !important; */
+    }
+	.jumbotron p {
+		font-size: 120% !important;
+	}
+}
+
+
+@media only screen and (max-width: 480px){
+    .jumbotron h1{
+		font-size:180% !important;
+		/* line-height:115% !important; */
+    }
+	
+	.jumbotron p {
+		font-size: 100% !important;
+	}
+}
+
+.jumbotron h1 {
+  /* color: #111FFC; */
+  text-shadow: 2px 2px 3px #FFFFFF;
+  font-size: 300%;  
+  border: 0px solid #ddd;  
+  font-family: 'Shift', sans-serif;
+  /* font-family: 'Lobster', cursive; */
+  font-weight: normal;
+  margin-left: 2%;
+
+}
+
+.jumbotron p {
+  font-size: 250%;
+  font-family: 'Shift', sans-serif;
+  /* color: #FFE127; */
+  text-shadow: 1px 1px 0px;
+  margin-left: 2%;
+  
+}
+
+#JumbText {
+	position: relative;
+	bottom: -350px;
+	background-color: rgba(244,244,244, 0.5); 
+	width: 100%;
+	
+	
+}
+
+/* 
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+.nav a {
+ color: #5a5a5a;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.tab-content .nav a {
+ color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+.tab-content .tab-pane .neighborhood-guides .container .row .col-md-4 .thumbnail {
+	border: 0px solid #ddd;
+}
+
+.tab-content .tab-pane .container1 {
+	padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+	height: 500px;
+	width: 800px;
+	overflow: hidden;
+	
+	/*position: relative; top: 4 px; left: 20%;*/
+	
+/* }
+.tab-content .tab-pane .container-fluid {
+	margin-top: 25px;
+  
+	/*position: relative; top: 4 px; left: 20%;*/
+
+
+/*.tab-content .tab-pane .container .carousel-inner {
+	
+	height: 500px;
+	width: 800px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	
+	
+
+}*/
