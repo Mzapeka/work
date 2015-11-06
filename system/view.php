@@ -11,6 +11,10 @@ function loadmainpage(){
 	include_once "view/main/mainForm.php";
 }
 
+function loadmenu($item){
+    include_once "view/menu.php";
+}
+
 // генерация случайных кодов любой длинны
 function genIdNum($longNum){
     $allowArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0,

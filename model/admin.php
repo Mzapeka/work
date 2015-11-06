@@ -121,6 +121,18 @@ function priceChangeAction(){
     return $error;
 }
 
+function getDillList(){
+    global $db;
+    $allDiallers = $db->select('dillers');
+    return $allDiallers;
+}
+
+function getUserList(){
+    global $db;
+    $allUsers = $db->select('users');
+    return $allUsers;
+}
+
 function test(){
     global $db;
     $query = ["idUser" => "777", "idDiller" => "888"];

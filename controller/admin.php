@@ -12,6 +12,7 @@ function audit(){
     }
     else {
         loadheader();
+        loadmenu(1);
         include_once("view/admin/adminAuthForm.php");
         loadfooter();
     }
@@ -52,6 +53,7 @@ function adminMainForm(){
     include_once("model/admin.php");
     $info = getAdminInfoAll();
     loadheader();
+    loadmenu(1);
     include_once("view/admin/adminMainForm.php");
     loadfooter();
 }
@@ -74,6 +76,7 @@ function settingView(){
     include_once("model/admin.php");
     $price = getPriceInfo();
     loadheader();
+    loadmenu(4);
     include_once("view/admin/adminSettingForm.php");
     loadfooter();
 }
@@ -82,6 +85,24 @@ function priceChange(){
     include_once("model/admin.php");
     priceChangeAction();
     header ("Refresh:2;url=".SITE."admin/settingView");
+}
+
+function dillersList(){
+    include_once("model/admin.php");
+    $dilList = getDillList();
+    loadheader();
+    loadmenu(2);
+    include_once("view/admin/adminDillViewForm.php");
+    loadfooter();
+}
+
+function usersList(){
+    include_once("model/admin.php");
+    $usersList = getUserList();
+    loadheader();
+    loadmenu(3);
+    include_once("view/admin/adminUserViewForm.php");
+    loadfooter();
 }
 
 function testDBclass(){

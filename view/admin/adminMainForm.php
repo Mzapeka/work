@@ -1,11 +1,3 @@
-<div class="col-md-2" style="padding-top: 17px">
-    <ul class="nav nav-pills nav-stacked">
-        <li role="presentation" class="active"><a href="<?=SITE."admin/adminMainForm"?>">Диллер - скидка</a></li>
-        <li role="presentation"><a href="#">Диллеры</a></li>
-        <li role="presentation"><a href="#">Клиенты</a></li>
-        <li role="presentation"><a href="<?=SITE."admin/settingView"?>">Настройки</a></li>
-    </ul>
-</div>
 <div class="col-md-10">
     <h3 class="bg-info">Страница администратора</h3>
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
