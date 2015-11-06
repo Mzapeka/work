@@ -28,7 +28,18 @@
                         <td><?=$user['mail']?></td>
                         <td><?=$user['phone']?></td>
                         <td><?=$user['createTime']?></td>
-                        <td><button type="button" class="btn btn-default btn-xs">Action</button></td>
+                        <td>
+                            <a href="#">
+                                <span>
+                                    <img src="<?=SITE."sourses/buttons/edit.png"?>" alt="#"/>
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span>
+                                    <img src="<?=SITE."sourses/buttons/drop.png"?>" alt="#"/>
+                                </span>
+                            </a>
+                        </td>
                     </tr>
                     <?php $j++;
                 }?>

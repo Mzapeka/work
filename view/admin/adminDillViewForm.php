@@ -30,7 +30,18 @@
                                 <td><?=$dialler['phone']?></td>
                                 <td><?=$dialler['createData']?></td>
                                 <td><?=$dialler['status']?></td>
-                                <td><button type="button" class="btn btn-default btn-xs">Action</button></td>
+                                <td>
+                                    <a href="#">
+                                <span>
+                                    <img src="<?=SITE."sourses/buttons/edit.png"?>" alt="#"/>
+                                </span>
+                                    </a>
+                                    <a href="#">
+                                <span>
+                                    <img src="<?=SITE."sourses/buttons/drop.png"?>" alt="#"/>
+                                </span>
+                                    </a>
+                                </td>
                             </tr>
                     <?php $j++;
                     }?>
