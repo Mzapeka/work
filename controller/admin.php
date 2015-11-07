@@ -105,6 +105,11 @@ function usersList(){
     loadfooter();
 }
 
+function dillerDelete(){
+    /*echo "Hello Nikolay: ".$_POST['idDil'];*/
+    echo "success";
+}
+
 function testDBclass(){
     include_once("model/admin.php");
     test();

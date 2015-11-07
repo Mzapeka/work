@@ -22,10 +22,10 @@
                         $j = 1;
                         foreach ($dilList as $dialler){
                     ?>
-                            <tr>
+                            <tr id="<?=$dialler['idDiller']?>">
                                 <td><?=$j?></td>
                                 <td><?=$dialler['idDiller']?></td>
-                                <td><?=$dialler['compName']?></td>
+                                <td class="company"><?=$dialler['compName']?></td>
                                 <td><?=$dialler['adress']?></td>
                                 <td><?=$dialler['firstName']?> <?=$dialler['lastName']?></td>
                                 <td><?=$dialler['mail']?></td>
@@ -33,16 +33,16 @@
                                 <td><?=$dialler['createData']?></td>
                                 <td><?=$dialler['status']==1 ? "Активный" : ""?></td>
                                 <td>
-                                    <a href="#">
+                                    <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#updateModal" data-idDill="<?=$dialler['idDiller']?>">
                                 <span>
                                     <img src="<?=SITE."sourses/buttons/edit.png"?>" alt="#"/>
                                 </span>
-                                    </a>
-                                    <a href="#">
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#deleteDillModal" data-idDill="<?=$dialler['idDiller']?>">
                                 <span>
                                     <img src="<?=SITE."sourses/buttons/drop.png"?>" alt="#"/>
                                 </span>
-                                    </a>
+                                    </button>
                                 </td>
                             </tr>
                     <?php $j++;
@@ -53,3 +53,21 @@
         </div>
 </div>
 
+<div class="modal fade" id="deleteDillModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <h4>Вы действительно хотите удалить дилера:</h4>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary btn-xs" id="deleteDill">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
