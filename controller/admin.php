@@ -107,6 +107,7 @@ function usersList(){
 
 function dillerDelete(){
     /*echo "Hello Nikolay: ".$_POST['idDil'];*/
+    //ToDo: сделать функцию удаления диллера
     echo "success";
 }
 
