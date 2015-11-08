@@ -25,20 +25,20 @@
                             <tr id="<?=$dialler['idDiller']?>">
                                 <td><?=$j?></td>
                                 <td><?=$dialler['idDiller']?></td>
-                                <td class="company"><?=$dialler['compName']?></td>
-                                <td><?=$dialler['adress']?></td>
-                                <td><?=$dialler['firstName']?> <?=$dialler['lastName']?></td>
-                                <td><?=$dialler['mail']?></td>
-                                <td><?=$dialler['phone']?></td>
+                                <td class="compName"><?=$dialler['compName']?></td>
+                                <td class="adress"><?=$dialler['adress']?></td>
+                                <td class="nameDil"><?=$dialler['firstName']?> <?=$dialler['lastName']?></td>
+                                <td class="mail"><?=$dialler['mail']?></td>
+                                <td class="phone"><?=$dialler['phone']?></td>
                                 <td><?=$dialler['createData']?></td>
                                 <td><?=$dialler['status']==1 ? "Активный" : ""?></td>
-                                <td>
-                                    <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#updateModal" data-idDill="<?=$dialler['idDiller']?>">
+                                <td class="action">
+                                    <button type="button" class="btn btn-default btn-xs editDill" data-idDill="<?=$dialler['idDiller']?>">
                                 <span>
                                     <img src="<?=SITE."sourses/buttons/edit.png"?>" alt="#"/>
                                 </span>
                                     </button>
-                                    <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#deleteDillModal" data-idDill="<?=$dialler['idDiller']?>">
+                                    <button type="button" class="btn btn-default btn-xs deleteDill" data-toggle="modal" data-target="#deleteDillModal" data-idDill="<?=$dialler['idDiller']?>">
                                 <span>
                                     <img src="<?=SITE."sourses/buttons/drop.png"?>" alt="#"/>
                                 </span>

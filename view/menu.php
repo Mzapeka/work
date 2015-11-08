@@ -1,3 +1,4 @@
+<script src="<?=SITE?>system/js/admin.js"></script>
 <div class="col-md-2" style="padding-top: 17px">
     <ul class="nav nav-pills nav-stacked">
         <li role="presentation" <?=$item==1 ? "class=\"active\"" : ""?>><a href="<?=SITE."admin/adminMainForm"?>">Диллер - скидка</a></li>
