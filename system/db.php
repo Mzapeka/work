@@ -128,6 +128,28 @@ class DB {
         return ($result);
     }
 
+    function delete($tableName, $forWhich = array()){
+        /** @var $forWhich TYPE_NAME */
+        if(!$this->select($tableName, false, [$forWhich[0] => $forWhich[1]])){
+            $result = false;
+        }
+        else {
+            $selected = "`$forWhich[0]` = :value";
+            $mask = [":value" => $forWhich[1]];
+            $sql = "DELETE FROM `$tableName` WHERE $selected";
+            $query = $this->link->prepare($sql);
+            $query->execute($mask);
+            $error = $query->errorInfo();
+            if ($error[0]){
+                $result = true;
+            }
+            else {
+                $result = false;
+            }
+        }
+        return ($result);
+        }
+
     function setCurentTime($tableName, $fild, $forWhich){
         if(!$this->select($tableName, false, [$forWhich[0] => $forWhich[1]])){
             $result[0] = false;

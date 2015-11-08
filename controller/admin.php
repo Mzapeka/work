@@ -12,7 +12,6 @@ function audit(){
     }
     else {
         loadheader();
-        loadmenu(1);
         include_once("view/admin/adminAuthForm.php");
         loadfooter();
     }
@@ -108,7 +107,13 @@ function usersList(){
 function dillerDelete(){
     /*echo "Hello Nikolay: ".$_POST['idDil'];*/
     //ToDo: сделать функцию удаления диллера
-    echo "success";
+    include_once("model/admin.php");
+    if (dillDeleteAction($_POST['idDil'])){
+        echo("success");
+    }
+    else {
+        echo("false");
+    }
 }
 
 function testDBclass(){

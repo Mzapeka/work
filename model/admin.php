@@ -133,6 +133,12 @@ function getUserList(){
     return $allUsers;
 }
 
+function dillDeleteAction($idDill){
+    global $db;
+    $tableName = 'dillers';
+    return $db->delete($tableName,['idDiller', $idDill]);
+}
+
 function test(){
     global $db;
     $query = ["idUser" => "777", "idDiller" => "888"];
