@@ -1,3 +1,4 @@
+<script src="<?=SITE?>system/js/userForm.js"></script>
 <div class="container marketing">
 
 <div class="row">
