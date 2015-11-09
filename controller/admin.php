@@ -116,6 +116,12 @@ function dillerDelete(){
     }
 }
 
+function dillerUpdate(){
+    include_once("model/admin.php");
+    dillUpdateAction($_POST);
+}
+
+
 function testDBclass(){
     include_once("model/admin.php");
     test();

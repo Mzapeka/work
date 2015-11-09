@@ -139,6 +139,10 @@ function dillDeleteAction($idDill){
     return $db->delete($tableName,['idDiller', $idDill]);
 }
 
+function dillUpdateAction($dillInfo = array()){
+    var_dump($_POST);
+}
+
 function test(){
     global $db;
     $query = ["idUser" => "777", "idDiller" => "888"];

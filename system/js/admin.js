@@ -43,9 +43,11 @@ $('#deleteDillModal').on('show.bs.modal', function (event) {
 $('.editDill').click(editDiller);
 
 function editDiller(){
+    //узнаем идентификатор диллера из атрибута data- кнопки редактирования строки
     var id = $(this).data('iddill');
-    var dillInfo = new Object();
     var row = $('#' + id);
+    //формируем объект со старыми данными
+    var dillInfo = new Object();
     var editFilds= row.find('.compName, .adress, .mail, .phone, .nameDil');
     editFilds.each(function(){
         if ($(this).attr('class') == 'nameDil'){
@@ -57,6 +59,7 @@ function editDiller(){
             dillInfo[$(this).attr('class')] = $(this).text();
         }
     });
+    //вставляем в таблицу текстовые инпуты со старыми данными
     editFilds.each(function(){
         $(this).text('').append(function(){
             if ($(this).attr('class') == 'nameDil'){
@@ -73,7 +76,8 @@ function editDiller(){
         return '<input type="button" class="btn btn-default btn-xs okbutton" value="Ok"/>'+
             '<input type="button" class="btn btn-default btn-xs exitbutton" value="Отмена"/>'
     })
-
+        //Обработчик кнопки отмены редактирования
+    //ToDo: реализовать функцию заполнения полей таблици - передаем туда объект
     row.find('.exitbutton').click(function(){
         editFilds.each(function(){
             if ($(this).attr('class') == 'nameDil'){
@@ -86,6 +90,35 @@ function editDiller(){
         row.find('.exitbutton, .okbutton').remove();
         row.find('.deleteDill, .editDill').show();
     })
+
+    row.find('.okbutton').click(function(){
+        //создаем объект из новых данных
+        var newDillInfo = new Object();
+        editFilds.each(function(){
+            if ($(this).attr('class') == 'nameDil'){
+                newDillInfo['firstName'] = $(this).find(':first-child').val();
+                newDillInfo['lastName'] = $(this).find(':last-child').val();
+            }
+            else {
+                newDillInfo[$(this).attr('class')] = $(this).find(':text').val();
+            }
+        })
+        newDillInfo.idDiller = id;
+        //отправляем объект на сервер
+        $.post(
+            'http://kts540.in.ua/admin/dillerUpdate',
+            {'dillerInfo': newDillInfo},
+            result
+        )
+            .success(function(){
+                //ToDo: реализовать апдейт формы в зависимости от успеха редактирования данных
+            })
+        ;
+        function result(data){
+            alert(data);
+        }
+    })
+
 }
 
 /*
