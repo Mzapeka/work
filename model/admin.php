@@ -140,7 +140,11 @@ function dillDeleteAction($idDill){
 }
 
 function dillUpdateAction($dillInfo = array()){
-    var_dump($_POST);
+    global $db;
+    $dillInfoArray = $dillInfo['dillerInfo'];
+    $id = array_pop($dillInfoArray);
+    $er = $db->update('dillers', $dillInfoArray, ['idDiller', $id]);
+    return $er[0];
 }
 
 function test(){

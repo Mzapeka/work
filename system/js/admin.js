@@ -34,11 +34,7 @@ $('#deleteDillModal').on('show.bs.modal', function (event) {
             modal.find('.modal-body h4').text('Дилера удалить не удалось: ' + data);
         }
     }
-
-
 })
-
-
 // Управление редактированием диллеров
 $('.editDill').click(editDiller);
 
@@ -77,9 +73,8 @@ function editDiller(){
             '<input type="button" class="btn btn-default btn-xs exitbutton" value="Отмена"/>'
     })
         //Обработчик кнопки отмены редактирования
-    //ToDo: реализовать функцию заполнения полей таблици - передаем туда объект
     row.find('.exitbutton').click(function(){
-        editFilds.each(function(){
+/*        editFilds.each(function(){
             if ($(this).attr('class') == 'nameDil'){
                 $(this).empty().text(dillInfo.firstName + ' ' + dillInfo.lastName);
             }
@@ -88,8 +83,22 @@ function editDiller(){
             }
         })
         row.find('.exitbutton, .okbutton').remove();
-        row.find('.deleteDill, .editDill').show();
+        row.find('.deleteDill, .editDill').show();*/
+        viewDillerInfo(editFilds,dillInfo,row);
     })
+
+    function viewDillerInfo(filds, info, activrow){
+        filds.each(function(){
+            if ($(this).attr('class') == 'nameDil'){
+                $(this).empty().text(info.firstName + ' ' + info.lastName);
+            }
+            else {
+                $(this).empty().text(info[$(this).attr('class')]);
+            }
+        })
+        activrow.find('.exitbutton, .okbutton').remove();
+        activrow.find('.deleteDill, .editDill').show();
+    }
 
     row.find('.okbutton').click(function(){
         //создаем объект из новых данных
@@ -108,17 +117,21 @@ function editDiller(){
         $.post(
             'http://kts540.in.ua/admin/dillerUpdate',
             {'dillerInfo': newDillInfo},
-            result
+            function result(data){
+                if (data == 'success'){
+                    viewDillerInfo(editFilds,newDillInfo,row);
+                }
+                else {
+                    viewDillerInfo(editFilds,dillInfo,row);
+                    alert('Информацию неудалось записать');
+                }
+            }
         )
-            .success(function(){
-                //ToDo: реализовать апдейт формы в зависимости от успеха редактирования данных
+            .error(function(){
+                viewDillerInfo(editFilds,dillInfo,row);
+                alert('Ошибка соединения. Данные не переданы');
             })
-        ;
-        function result(data){
-            alert(data);
-        }
     })
-
 }
 
 /*

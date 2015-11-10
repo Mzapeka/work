@@ -118,7 +118,12 @@ function dillerDelete(){
 
 function dillerUpdate(){
     include_once("model/admin.php");
-    dillUpdateAction($_POST);
+    if (dillUpdateAction($_POST) === "00000"){
+        echo("success");
+    }
+    else {
+        echo("false");
+    }
 }
 
 
